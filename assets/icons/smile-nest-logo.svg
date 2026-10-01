@@ -1,1 +1,111 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0b3034"/>
+            <stop offset="100%" stop-color="#092529"/>
+        </linearGradient>
 
+        <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f28caf"/>
+            <stop offset="100%" stop-color="#d96f94"/>
+        </linearGradient>
+
+        <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#78b7d1"/>
+            <stop offset="100%" stop-color="#4c8fae"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Main circular background -->
+    <circle
+        cx="250"
+        cy="250"
+        r="235"
+        fill="url(#bg)"
+    />
+
+    <!-- Outer ring -->
+    <circle
+        cx="250"
+        cy="250"
+        r="220"
+        fill="none"
+        stroke="#ffffff"
+        stroke-opacity="0.16"
+        stroke-width="3"
+    />
+
+    <!-- Tooth -->
+    <path
+        d="
+        M180 113
+        C151 118 131 143 134 176
+        C137 207 151 227 156 251
+        C162 279 162 324 176 349
+        C185 365 198 367 208 354
+        C218 341 224 313 232 287
+        C237 271 245 267 250 267
+        C255 267 263 271 268 287
+        C276 313 282 341 292 354
+        C302 367 315 365 324 349
+        C338 324 338 279 344 251
+        C349 227 363 207 366 176
+        C369 143 349 118 320 113
+        C291 108 272 121 250 121
+        C228 121 209 108 180 113
+        Z
+        "
+        fill="#ffffff"
+    />
+
+    <!-- Tooth highlight -->
+    <path
+        d="
+        M177 148
+        C163 162 166 185 174 198
+        "
+        fill="none"
+        stroke="#dceff0"
+        stroke-width="8"
+        stroke-linecap="round"
+        opacity="0.9"
+    />
+
+    <!-- Smile Nest text -->
+    <text
+        x="250"
+        y="404"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="48"
+        font-weight="700"
+        fill="url(#pink)"
+    >
+        Smile Nest
+    </text>
+
+    <!-- Dental Clinic ribbon -->
+    <path
+        d="
+        M125 425
+        Q250 452 375 425
+        L365 458
+        Q250 480 135 458
+        Z
+        "
+        fill="url(#blue)"
+    />
+
+    <text
+        x="250"
+        y="451"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="19"
+        font-weight="700"
+        letter-spacing="4"
+        fill="#ffffff"
+    >
+        DENTAL CLINIC
+    </text>
+</svg>
