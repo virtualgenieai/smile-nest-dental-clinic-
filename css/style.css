@@ -2006,3 +2006,34 @@ img:not([src]) {
         transition-duration: .01ms !important;
     }
 }
+/* =========================================================
+   SPECIALITIES PAGE — MOBILE HEADER CLEARANCE
+   Desktop remains unchanged
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-hero {
+        min-height: auto;
+        padding-top: 0;
+    }
+
+    .page-hero-content {
+        padding-top: 145px;
+        padding-bottom: 65px;
+    }
+
+    .page-hero h1 {
+        margin-top: 14px;
+        font-size: clamp(2.65rem, 12vw, 3.4rem);
+        line-height: 1.06;
+    }
+
+    .page-hero p {
+        margin-top: 20px;
+    }
+
+    .page-hero-actions {
+        margin-top: 28px;
+    }
+}
