@@ -105,8 +105,20 @@ button {
 .brand-logo {
     display: flex;
     align-items: center;
-    width: 76px;
+    justify-content: center;
+    width: 92px;
+    height: 92px;
     flex-shrink: 0;
+    overflow: visible;
+}
+
+.logo img,
+.brand-logo img {
+    width: 92px;
+    height: 92px;
+    max-width: none;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .logo img,
