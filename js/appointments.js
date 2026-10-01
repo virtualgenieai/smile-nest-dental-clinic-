@@ -17,11 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
             '[data-appointment="whatsapp"]'
         );
 
+
     whatsappButtons.forEach(button => {
 
         button.addEventListener("click", event => {
 
             event.preventDefault();
+
 
             const message =
                 `Hello Smile Nest Dental Clinic,
@@ -30,11 +32,13 @@ I would like to book an appointment.
 
 Please let me know the available appointment timings.`;
 
-            const url =
+
+            const whatsappURL =
                 `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
+
             window.open(
-                url,
+                whatsappURL,
                 "_blank",
                 "noopener,noreferrer"
             );
@@ -53,6 +57,7 @@ Please let me know the available appointment timings.`;
             '[data-appointment="call"]'
         );
 
+
     callButtons.forEach(button => {
 
         button.addEventListener("click", event => {
@@ -68,7 +73,7 @@ Please let me know the available appointment timings.`;
 
 
     /* =====================================================
-       SERVICE-SPECIFIC WHATSAPP BUTTONS
+       SERVICE / SPECIALITY ENQUIRIES
        ===================================================== */
 
     const serviceButtons =
@@ -76,37 +81,39 @@ Please let me know the available appointment timings.`;
             "[data-service]"
         );
 
+
     serviceButtons.forEach(button => {
 
-        button.addEventListener(
-            "click",
-            event => {
+        button.addEventListener("click", event => {
 
-                event.preventDefault();
+            event.preventDefault();
 
-                const service =
-                    button.getAttribute(
-                        "data-service"
-                    );
 
-                const message =
-                    `Hello Smile Nest Dental Clinic,
+            const service =
+                button.getAttribute(
+                    "data-service"
+                );
+
+
+            const message =
+                `Hello Smile Nest Dental Clinic,
 
 I would like to enquire about ${service} and would like to book an appointment.
 
 Please let me know the available timings.`;
 
-                const url =
-                    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-                window.open(
-                    url,
-                    "_blank",
-                    "noopener,noreferrer"
-                );
+            const whatsappURL =
+                `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-            }
-        );
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        });
 
     });
 
