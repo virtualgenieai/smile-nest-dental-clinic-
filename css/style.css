@@ -2037,3 +2037,283 @@ img:not([src]) {
         margin-top: 28px;
     }
 }
+/* =========================================================
+   SPECIALITIES PAGE — MOBILE TYPOGRAPHY UPGRADE
+   Desktop layout intentionally untouched
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       INTRODUCTION
+       ------------------------- */
+
+    .speciality-intro {
+        padding-top: 72px;
+        padding-bottom: 42px;
+    }
+
+    .speciality-intro .section-heading {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .speciality-intro .section-heading .eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .speciality-intro .section-heading h2 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.45rem, 11vw, 3.25rem);
+        line-height: 1.02;
+        letter-spacing: -0.035em;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+
+    .speciality-intro .section-heading h2 span {
+        display: block;
+        color: var(--pink, #d99aaa);
+        font-style: italic;
+    }
+
+    .speciality-intro .section-heading p {
+        max-width: 34rem;
+        font-size: 0.98rem;
+        line-height: 1.8;
+        color: var(--ink-soft, #657477);
+    }
+
+
+    /* -------------------------
+       SPECIALITY SECTION
+       ------------------------- */
+
+    .specialities-page-section {
+        padding-top: 35px;
+        padding-bottom: 70px;
+    }
+
+    .specialities-page-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+
+    /* -------------------------
+       PREMIUM SPECIALITY CARD
+       ------------------------- */
+
+    .speciality-detail-card {
+        display: block;
+
+        min-height: auto;
+
+        padding: 30px 26px 27px;
+
+        border-radius: 24px;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.98),
+                rgba(248, 245, 239, 0.96)
+            );
+
+        border: 1px solid rgba(18, 63, 66, 0.09);
+
+        box-shadow:
+            0 15px 45px rgba(18, 63, 66, 0.065);
+
+        transform: none;
+    }
+
+    .speciality-detail-card:hover {
+        transform: none;
+        box-shadow:
+            0 15px 45px rgba(18, 63, 66, 0.065);
+    }
+
+
+    /* -------------------------
+       REMOVE NUMBERING
+       ------------------------- */
+
+    .speciality-number {
+        display: none;
+    }
+
+
+    /* -------------------------
+       CATEGORY LABEL
+       ------------------------- */
+
+    .speciality-label {
+        display: inline-flex;
+        align-items: center;
+
+        margin-bottom: 13px;
+
+        color: #789CAA;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 0.64rem;
+        font-weight: 700;
+
+        letter-spacing: 0.19em;
+        line-height: 1.4;
+
+        text-transform: uppercase;
+    }
+
+    .speciality-label::before {
+        content: "";
+
+        width: 20px;
+        height: 1px;
+
+        margin-right: 9px;
+
+        background: #D99AAA;
+    }
+
+
+    /* -------------------------
+       SPECIALITY TITLE
+       ------------------------- */
+
+    .speciality-detail-content h2 {
+        margin: 0 0 17px;
+
+        color: #123F42;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: clamp(2.15rem, 10vw, 3rem);
+
+        font-weight: 600;
+
+        line-height: 1.02;
+
+        letter-spacing: -0.035em;
+    }
+
+
+    /* -------------------------
+       DESCRIPTION
+       ------------------------- */
+
+    .speciality-detail-content p {
+        margin: 0 0 25px;
+
+        color: #526568;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 0.94rem;
+
+        line-height: 1.78;
+
+        max-width: 35rem;
+    }
+
+
+    /* -------------------------
+       DOCTOR PROFILE
+       ------------------------- */
+
+    .specialist-mini-profile {
+        position: relative;
+
+        margin-top: 4px;
+        margin-bottom: 24px;
+
+        padding: 16px 0 16px 17px;
+
+        border-left: 2px solid rgba(217, 154, 170, 0.65);
+
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .specialist-mini-profile strong {
+        color: #123F42;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 0.93rem;
+        font-weight: 700;
+
+        line-height: 1.35;
+    }
+
+    .specialist-mini-profile span {
+        color: #718083;
+
+        font-family: "DM Sans", sans-serif;
+
+        font-size: 0.76rem;
+
+        line-height: 1.55;
+    }
+
+
+    /* -------------------------
+       ENQUIRY LINK
+       ------------------------- */
+
+    .speciality-detail-card .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        color: #123F42;
+
+        font-size: 0.78rem;
+        font-weight: 700;
+
+        letter-spacing: 0.01em;
+
+        transition:
+            gap 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .speciality-detail-card .text-link span {
+        color: #D99AAA;
+
+        font-size: 1.15rem;
+
+        transition: transform 0.3s ease;
+    }
+
+    .speciality-detail-card .text-link:hover {
+        color: #082F32;
+    }
+
+    .speciality-detail-card .text-link:hover span {
+        transform: translateX(4px);
+    }
+
+
+    /* -------------------------
+       SUBTLE CARD ACCENT
+       ------------------------- */
+
+    .speciality-detail-card::before {
+        height: 2px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #D99AAA,
+                #789CAA,
+                transparent
+            );
+
+        transform: scaleX(1);
+    }
+}
