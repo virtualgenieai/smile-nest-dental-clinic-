@@ -1,0 +1,457 @@
+/* =========================================================
+   SMILE NEST DENTAL CLINIC
+   animations.css
+   ========================================================= */
+
+/* ---------- SCROLL REVEAL ---------- */
+
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.stagger {
+    opacity: 0;
+    transition:
+        opacity 0.75s ease,
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal {
+    transform: translateY(28px);
+}
+
+.reveal-left {
+    transform: translateX(-35px);
+}
+
+.reveal-right {
+    transform: translateX(35px);
+}
+
+.reveal-scale {
+    transform: scale(0.94);
+}
+
+/* ---------- STAGGERED CHILDREN ---------- */
+
+.stagger > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.stagger.visible > * {
+    opacity: 1;
+    transform: none;
+}
+
+.stagger.visible > *:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.stagger.visible > *:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.stagger.visible > *:nth-child(3) {
+    transition-delay: 0.19s;
+}
+
+.stagger.visible > *:nth-child(4) {
+    transition-delay: 0.26s;
+}
+
+.stagger.visible > *:nth-child(5) {
+    transition-delay: 0.33s;
+}
+
+.stagger.visible > *:nth-child(6) {
+    transition-delay: 0.40s;
+}
+
+/* ---------- HERO ANIMATION ---------- */
+
+.hero-visual {
+    animation: heroFloat 6s ease-in-out infinite;
+}
+
+.hero-card {
+    animation:
+        heroCardIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-content {
+    animation:
+        heroContentIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes heroCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heroContentIn {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------- CARD HOVER ANIMATIONS ---------- */
+
+.speciality-card,
+.doctor-card,
+.why-card,
+.speciality-detail-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.speciality-card:hover,
+.doctor-card:hover,
+.why-card:hover,
+.speciality-detail-card:hover {
+    transform: translateY(-7px);
+}
+
+/* ---------- SPECIALITY CARD TOP LINE ---------- */
+
+.speciality-card::before {
+    transition:
+        transform 0.35s ease;
+
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.speciality-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* ---------- DOCTOR IMAGE ---------- */
+
+.doctor-photo img,
+.doctor-card-image img {
+    transition:
+        transform 0.55s ease;
+}
+
+.doctor-card:hover .doctor-photo img,
+.doctor-card:hover .doctor-card-image img {
+    transform: scale(1.045);
+}
+
+/* ---------- TEAM DROPDOWN ---------- */
+
+.team-dropdown-content {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    opacity: 0;
+
+    transition:
+        grid-template-rows 0.5s ease,
+        opacity 0.35s ease;
+}
+
+.team-dropdown-content > div {
+    overflow: hidden;
+}
+
+.team-dropdown.open .team-dropdown-content {
+    grid-template-rows: 1fr;
+    opacity: 1;
+}
+
+.team-dropdown-header {
+    transition:
+        background 0.25s ease;
+}
+
+.team-dropdown-header:hover {
+    background: rgba(15, 77, 80, 0.025);
+}
+
+.team-dropdown-chevron,
+.dropdown-arrow {
+    transition:
+        transform 0.35s ease;
+}
+
+.team-dropdown.open .team-dropdown-chevron,
+.team-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* ---------- BUTTON SHINE ---------- */
+
+.btn,
+.appointment-button,
+.nav-button,
+.nav-cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn::after,
+.appointment-button::after,
+.nav-button::after,
+.nav-cta::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        100deg,
+        transparent,
+        rgba(255, 255, 255, 0.28),
+        transparent
+    );
+
+    transform: skewX(-18deg);
+
+    transition:
+        left 0.55s ease;
+
+    pointer-events: none;
+}
+
+.btn:hover::after,
+.appointment-button:hover::after,
+.nav-button:hover::after,
+.nav-cta:hover::after {
+    left: 135%;
+}
+
+/* ---------- MOBILE MENU ---------- */
+
+.mobile-menu-button span,
+.mobile-menu-toggle span {
+    transition:
+        transform 0.3s ease,
+        opacity 0.25s ease;
+}
+
+.mobile-menu-button.active span:nth-child(1),
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2),
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-button.active span:nth-child(3),
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+.mobile-navigation {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.mobile-navigation:not(.open) {
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mobile-navigation.open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* ---------- MAP ---------- */
+
+.map-card::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 70px;
+    height: 70px;
+
+    margin-left: -35px;
+    margin-top: -35px;
+
+    border: 2px solid rgba(15, 77, 80, 0.20);
+    border-radius: 50%;
+
+    animation:
+        mapPulse 2.4s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+@keyframes mapPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 0;
+    }
+}
+
+/* ---------- FLOATING ACCENTS ---------- */
+
+.floating-accent {
+    animation:
+        accentFloat 5s ease-in-out infinite;
+}
+
+@keyframes accentFloat {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(5px, -8px) rotate(3deg);
+    }
+}
+
+/* ---------- IMAGE ERROR ---------- */
+
+.image-load-error {
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+/* ---------- PAGE HERO ---------- */
+
+.page-hero-content {
+    animation:
+        pageHeroIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pageHeroIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- CTA ---------- */
+
+.cta-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.cta-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 35px 80px rgba(8, 55, 58, 0.22);
+}
+
+/* ---------- CONTACT / MAP ---------- */
+
+.map-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* ---------- FOUNDER IMAGE ---------- */
+
+.founder-photo-inner {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.founder-photo-inner:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .stagger,
+    .stagger > * {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
