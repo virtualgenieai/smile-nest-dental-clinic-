@@ -4,30 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
        MOBILE NAVIGATION
        ===================================================== */
 
-    const menuButton =
-        document.querySelector(".mobile-menu-button") ||
-        document.querySelector(".mobile-menu-toggle");
-
-    const mobileNavigation =
-        document.querySelector(".mobile-navigation") ||
-        document.querySelector(".main-nav");
+    const menuButton = document.querySelector(".mobile-menu-button");
+    const mobileNavigation = document.querySelector(".mobile-navigation");
 
     if (menuButton && mobileNavigation) {
 
+        menuButton.setAttribute("aria-expanded", "false");
+
         menuButton.addEventListener("click", () => {
 
-            const isOpen =
-                mobileNavigation.classList.contains("open");
+            const isOpen = mobileNavigation.classList.contains("open");
 
-            mobileNavigation.classList.toggle(
-                "open",
-                !isOpen
-            );
-
-            menuButton.classList.toggle(
-                "active",
-                !isOpen
-            );
+            mobileNavigation.classList.toggle("open", !isOpen);
+            menuButton.classList.toggle("active", !isOpen);
 
             menuButton.setAttribute(
                 "aria-expanded",
@@ -43,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
             link.addEventListener("click", () => {
 
                 mobileNavigation.classList.remove("open");
-
                 menuButton.classList.remove("active");
 
                 menuButton.setAttribute(
@@ -60,14 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
        HEADER SCROLL EFFECT
        ===================================================== */
 
-    const header =
-        document.querySelector(".site-header");
+    const header = document.querySelector(".site-header");
 
     const updateHeader = () => {
 
-        if (!header) {
-            return;
-        }
+        if (!header) return;
 
         if (window.scrollY > 40) {
             header.classList.add("scrolled");
@@ -86,13 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       SCROLL REVEAL ANIMATIONS
+       SCROLL REVEAL
        ===================================================== */
 
-    const revealElements =
-        document.querySelectorAll(
-            ".reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger"
-        );
+    const revealElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger"
+    );
 
     if ("IntersectionObserver" in window) {
 
@@ -104,15 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         if (entry.isIntersecting) {
 
-                            entry.target.classList.add(
-                                "visible"
-                            );
+                            entry.target.classList.add("visible");
 
-                            observer.unobserve(
-                                entry.target
-                            );
+                            observer.unobserve(entry.target);
                         }
-
                     });
 
                 },
@@ -136,41 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       TEAM DROPDOWN
-       ===================================================== */
-
-    const teamDropdown =
-        document.querySelector(".team-dropdown");
-
-    const teamHeader =
-        document.querySelector(".team-dropdown-header");
-
-    if (teamDropdown && teamHeader) {
-
-        teamHeader.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        teamHeader.addEventListener("click", () => {
-
-            const isOpen =
-                teamDropdown.classList.contains("open");
-
-            teamDropdown.classList.toggle(
-                "open",
-                !isOpen
-            );
-
-            teamHeader.setAttribute(
-                "aria-expanded",
-                String(!isOpen)
-            );
-        });
-    }
-
-
-    /* =====================================================
        SMOOTH ANCHOR SCROLLING
        ===================================================== */
 
@@ -183,10 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const targetId =
                     link.getAttribute("href");
 
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
+                if (!targetId || targetId === "#") {
                     return;
                 }
 
@@ -200,9 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.preventDefault();
 
                 const headerHeight =
-                    header
-                        ? header.offsetHeight
-                        : 0;
+                    header ? header.offsetHeight : 0;
 
                 const targetPosition =
                     target.getBoundingClientRect().top +
@@ -241,8 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
        WHATSAPP LINKS
        ===================================================== */
 
-    const phoneNumber =
-        "919496041577";
+    const phoneNumber = "919496041577";
 
     const whatsappLinks =
         document.querySelectorAll(
@@ -290,49 +228,26 @@ document.addEventListener("DOMContentLoaded", () => {
        ESCAPE KEY
        ===================================================== */
 
-    document.addEventListener(
-        "keydown",
-        event => {
+    document.addEventListener("keydown", event => {
 
-            if (event.key !== "Escape") {
-                return;
-            }
-
-            if (mobileNavigation) {
-
-                mobileNavigation.classList.remove(
-                    "open"
-                );
-            }
-
-            if (menuButton) {
-
-                menuButton.classList.remove(
-                    "active"
-                );
-
-                menuButton.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-            }
-
-            if (teamDropdown) {
-
-                teamDropdown.classList.remove(
-                    "open"
-                );
-            }
-
-            if (teamHeader) {
-
-                teamHeader.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-            }
-
+        if (event.key !== "Escape") {
+            return;
         }
-    );
+
+        if (mobileNavigation) {
+            mobileNavigation.classList.remove("open");
+        }
+
+        if (menuButton) {
+
+            menuButton.classList.remove("active");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+        }
+
+    });
 
 });
