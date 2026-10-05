@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore the dental specialities at Smile Nest Dental Clinic, Thiruvananthapuram — pediatric dentistry, orthodontics, endodontics, oral and maxillofacial surgery, prosthodontics and implantology.">
+
+    <meta name="keywords" content="dental specialities Thiruvananthapuram, pediatric dentistry Kerala, orthodontics Thiruvananthapuram, endodontics Kerala, oral maxillofacial surgeon Thiruvananthapuram, implantologist Kerala">
+
+    <meta name="author" content="Smile Nest Dental Clinic">
+
+    <meta property="og:title" content="Our Specialities | Smile Nest Dental Clinic">
+    <meta property="og:description" content="Specialist dental care for children, families and every smile.">
+    <meta property="og:type" content="website">
+
+    <title>Dental Specialities | Smile Nest Dental Clinic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/smile-nest-logo.svg">
+
+    <style>
+        /* =========================================================
+           SMILE NEST — PREMIUM SPECIALITIES PAGE
+           Page-specific styling only.
+           ========================================================= */
+
+        .specialities-page {
+            --sn-teal: #123f42;
+            --sn-deep: #082f32;
+            --sn-ivory: #f8f5ef;
+            --sn-sage: #a8bbaa;
+            --sn-rose: #d99aaa;
+            --sn-blue: #789caa;
+            --sn-muted: #657477;
+            --sn-line: rgba(18, 63, 66, .13);
+        }
+
+        .specialities-page .site-header {
+            z-index: 100;
+        }
+
+        /* ---------- PREMIUM HERO ---------- */
+
+        .specialities-page .page-hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 84% 24%, rgba(217,154,170,.22), transparent 28%),
+                radial-gradient(circle at 8% 78%, rgba(120,156,170,.16), transparent 30%),
+                var(--sn-ivory);
+        }
+
+        .specialities-page .page-hero::before {
+            content: "";
+            position: absolute;
+            width: 620px;
+            height: 620px;
+            border: 1px solid rgba(18,63,66,.10);
+            border-radius: 50%;
+            right: -270px;
+            top: -250px;
+        }
+
+        .specialities-page .page-hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(18,63,66,.08);
+            border-radius: 50%;
+            left: -250px;
+            bottom: -280px;
+        }
+
+        .specialities-page .page-hero-container {
+            position: relative;
+            width: 100%;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+        }
+
+        .specialities-page .page-hero-content {
+            position: relative;
+            z-index: 4;
+            width: min(760px, 72%);
+            padding: 110px 0;
+        }
+
+        .specialities-page .page-hero h1 {
+            margin: 18px 0 24px;
+            max-width: 760px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(3.2rem, 6.5vw, 6rem);
+            line-height: .98;
+            letter-spacing: -.055em;
+            color: var(--sn-deep);
+        }
+
+        .specialities-page .page-hero h1 span {
+            display: block;
+            color: var(--sn-rose);
+            font-style: italic;
+        }
+
+        .specialities-page .page-hero p {
+            max-width: 650px;
+            margin: 0;
+            font-size: 1.08rem;
+            line-height: 1.85;
+            color: var(--sn-muted);
+        }
+
+        .specialities-page .page-hero .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 34px;
+        }
+
+        .specialities-page .page-hero-decoration {
+            position: absolute;
+            right: 4%;
+            top: 50%;
+            width: min(390px, 34vw);
+            aspect-ratio: 1;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .specialities-page .page-hero-circle {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 38% 30%, rgba(255,255,255,.95), rgba(255,255,255,.38) 38%, transparent 39%),
+                linear-gradient(145deg, rgba(18,63,66,.98), rgba(8,47,50,.98));
+            box-shadow:
+                0 35px 90px rgba(8,47,50,.18),
+                inset 0 0 0 1px rgba(255,255,255,.14);
+        }
+
+        .specialities-page .page-hero-circle::before {
+            content: "";
+            position: absolute;
+            inset: 20px;
+            border: 1px solid rgba(255,255,255,.20);
+            border-radius: 50%;
+        }
+
+        .specialities-page .page-hero-circle::after {
+            content: "SMILE NEST";
+            position: absolute;
+            left: 50%;
+            bottom: 22%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,.55);
+            font-size: .65rem;
+            font-weight: 700;
+            letter-spacing: .28em;
+            white-space: nowrap;
+        }
+
+        .specialities-page .page-hero-tooth {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-size: 8rem;
+            line-height: 1;
+            text-shadow: 0 12px 35px rgba(0,0,0,.20);
+        }
+
+        /* ---------- INTRO ---------- */
+
+        .specialities-page .speciality-intro {
+            padding-top: 120px;
+            padding-bottom: 70px;
+            background: #fff;
+        }
+
+        .specialities-page .speciality-intro .section-heading {
+            max-width: 900px;
+        }
+
+        .specialities-page .speciality-intro h2 {
+            font-size: clamp(2.7rem, 5vw, 4.5rem);
+            letter-spacing: -.045em;
+        }
+
+        .specialities-page .speciality-intro h2 span {
+            color: var(--sn-rose);
+            font-style: italic;
+        }
+
+        .specialities-page .speciality-intro p {
+            max-width: 720px;
+        }
+
+        /* ---------- SPECIALITY SECTIONS ---------- */
+
+        .specialities-page .speciality-detail-section {
+            position: relative;
+            padding: 110px 0;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .specialities-page .speciality-detail-section.section-soft {
+            background:
+                linear-gradient(135deg, rgba(248,245,239,.96), rgba(255,255,255,1));
+        }
+
+        .specialities-page .speciality-detail-section::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            background: rgba(217,154,170,.08);
+            right: -250px;
+            top: -180px;
+            pointer-events: none;
+        }
+
+        .specialities-page .speciality-detail-section:nth-of-type(odd)::before {
+            left: -250px;
+            right: auto;
+            background: rgba(168,187,170,.11);
+        }
+
+        .specialities-page .speciality-detail-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+            align-items: center;
+            gap: clamp(50px, 7vw, 105px);
+        }
+
+        .specialities-page .speciality-detail-grid.reverse {
+            grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+        }
+
+        .specialities-page .speciality-detail-grid.reverse .speciality-detail-visual {
+            order: 2;
+        }
+
+        .specialities-page .speciality-detail-grid.reverse .speciality-detail-content {
+            order: 1;
+        }
+
+        /* ---------- IMAGE PANELS ---------- */
+
+        .specialities-page .speciality-detail-visual {
+            position: relative;
+            min-height: 570px;
+            border-radius: 34px;
+            overflow: hidden;
+            background: var(--sn-ivory);
+            box-shadow: 0 28px 70px rgba(8,47,50,.12);
+            border: 1px solid rgba(18,63,66,.10);
+            isolation: isolate;
+        }
+
+        .specialities-page .speciality-detail-visual::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border: 1px solid rgba(255,255,255,.65);
+            border-radius: 25px;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .specialities-page .speciality-detail-visual::after {
+            content: "";
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            right: -65px;
+            bottom: -65px;
+            background: rgba(217,154,170,.68);
+            z-index: 2;
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+
+        .specialities-page .speciality-detail-visual img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            transition: transform .8s cubic-bezier(.2,.65,.2,1);
+        }
+
+        .specialities-page .speciality-detail-visual:hover img {
+            transform: scale(1.045);
+        }
+
+        .specialities-page .speciality-image-label {
+            position: absolute;
+            z-index: 4;
+            left: 28px;
+            bottom: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 15px;
+            border-radius: 999px;
+            background: rgba(8,47,50,.78);
+            border: 1px solid rgba(255,255,255,.20);
+            color: #fff;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+
+        .specialities-page .speciality-image-label::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--sn-rose);
+        }
+
+        /* ---------- CONTENT ---------- */
+
+        .specialities-page .speciality-detail-content {
+            max-width: 650px;
+        }
+
+        .specialities-page .speciality-detail-content > .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            color: var(--sn-blue);
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .20em;
+        }
+
+        .specialities-page .speciality-detail-content > .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: var(--sn-rose);
+        }
+
+        .specialities-page .speciality-detail-content h2 {
+            margin: 0 0 24px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.65rem, 4.6vw, 4.25rem);
+            line-height: 1.02;
+            letter-spacing: -.045em;
+            color: var(--sn-deep);
+            font-weight: 600;
+        }
+
+        .specialities-page .speciality-detail-content h2 span {
+            display: block;
+            color: var(--sn-rose);
+            font-style: italic;
+        }
+
+        .specialities-page .speciality-detail-content > p {
+            margin: 0 0 17px;
+            max-width: 600px;
+            color: var(--sn-muted);
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        /* ---------- DOCTOR CARD ---------- */
+
+        .specialities-page .speciality-doctor {
+            margin: 30px 0 28px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid var(--sn-line);
+            border-radius: 20px;
+            background: rgba(248,245,239,.70);
+            box-shadow: 0 12px 30px rgba(8,47,50,.045);
+        }
+
+        .specialities-page .speciality-doctor-photo {
+            width: 62px;
+            height: 62px;
+            flex: 0 0 62px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--sn-sage);
+            border: 3px solid #fff;
+            box-shadow: 0 7px 18px rgba(8,47,50,.12);
+        }
+
+        .specialities-page .speciality-doctor-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .specialities-page .speciality-doctor-info > span {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--sn-blue);
+            font-size: .62rem;
+            font-weight: 700;
+            letter-spacing: .16em;
+        }
+
+        .specialities-page .speciality-doctor-info h3 {
+            margin: 0 0 4px;
+            font-family: "Playfair Display", serif;
+            color: var(--sn-deep);
+            font-size: 1.18rem;
+            line-height: 1.2;
+        }
+
+        .specialities-page .speciality-doctor-info p {
+            margin: 0;
+            color: var(--sn-muted);
+            font-size: .82rem;
+            line-height: 1.45;
+        }
+
+        .specialities-page .speciality-doctor-info small {
+            display: block;
+            margin-top: 4px;
+            color: var(--sn-teal);
+            font-size: .70rem;
+            font-weight: 600;
+        }
+
+        .specialities-page .academic-details {
+            margin-top: 13px;
+            padding-top: 13px;
+            border-top: 1px solid var(--sn-line);
+        }
+
+        .specialities-page .academic-details span {
+            display: block;
+            color: var(--sn-muted);
+            font-size: .72rem;
+            line-height: 1.55;
+        }
+
+        .specialities-page .academic-details span + span {
+            margin-top: 3px;
+        }
+
+        .specialities-page .academic-details strong {
+            color: var(--sn-teal);
+        }
+
+        .specialities-page .speciality-detail-content .btn {
+            min-height: 52px;
+        }
+
+        /* ---------- WHY ---------- */
+
+        .specialities-page .why-section {
+            padding: 120px 0;
+            background:
+                radial-gradient(circle at 90% 10%, rgba(217,154,170,.13), transparent 25%),
+                var(--sn-ivory);
+        }
+
+        .specialities-page .why-section .section-heading {
+            max-width: 800px;
+            margin-inline: auto;
+        }
+
+        .specialities-page .why-section .section-heading h2 {
+            font-size: clamp(2.7rem, 5vw, 4.5rem);
+            letter-spacing: -.045em;
+        }
+
+        .specialities-page .why-section .section-heading h2 span {
+            color: var(--sn-rose);
+            font-style: italic;
+        }
+
+        .specialities-page .speciality-why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 16px;
+            margin-top: 55px;
+        }
+
+        .specialities-page .why-point {
+            min-height: 180px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 30px;
+            border: 1px solid var(--sn-line);
+            border-radius: 24px;
+            background: rgba(255,255,255,.72);
+            box-shadow: 0 14px 35px rgba(8,47,50,.045);
+            transition: transform .35s ease, box-shadow .35s ease;
+        }
+
+        .specialities-page .why-point:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 45px rgba(8,47,50,.09);
+        }
+
+        .specialities-page .why-icon {
+            width: 50px;
+            height: 50px;
+            flex: 0 0 50px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--sn-deep);
+            color: #fff;
+            font-size: 1rem;
+            box-shadow: 0 10px 24px rgba(8,47,50,.15);
+        }
+
+        .specialities-page .why-point h3 {
+            margin: 1px 0 8px;
+            font-family: "Playfair Display", serif;
+            color: var(--sn-deep);
+            font-size: 1.35rem;
+        }
+
+        .specialities-page .why-point p {
+            margin: 0;
+            color: var(--sn-muted);
+            font-size: .88rem;
+            line-height: 1.7;
+        }
+
+        /* ---------- TEAM CTA ---------- */
+
+        .specialities-page .team-cta-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .specialities-page .team-cta {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 58px;
+            border-radius: 32px;
+            background: var(--sn-deep);
+            box-shadow: 0 28px 65px rgba(8,47,50,.17);
+        }
+
+        .specialities-page .team-cta::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 50%;
+            right: -100px;
+            top: -140px;
+        }
+
+        .specialities-page .team-cta > div {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .specialities-page .team-cta .eyebrow {
+            color: var(--sn-rose);
+        }
+
+        .specialities-page .team-cta h2 {
+            margin: 13px 0 13px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(2.4rem, 4.5vw, 4rem);
+            line-height: 1.02;
+            letter-spacing: -.04em;
+            color: #fff;
+        }
+
+        .specialities-page .team-cta h2 span {
+            color: var(--sn-rose);
+            font-style: italic;
+        }
+
+        .specialities-page .team-cta p {
+            margin: 0;
+            color: rgba(255,255,255,.70);
+            line-height: 1.7;
+        }
+
+        .specialities-page .team-cta .btn {
+            position: relative;
+            z-index: 2;
+            flex: 0 0 auto;
+        }
+
+        /* ---------- REMOVE OLD NUMBER VISUALS ---------- */
+
+        .specialities-page .speciality-number {
+            display: none !important;
+        }
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 900px) {
+
+            .specialities-page .page-hero {
+                min-height: auto;
+            }
+
+            .specialities-page .page-hero-container {
+                min-height: auto;
+                display: block;
+            }
+
+            .specialities-page .page-hero-content {
+                width: 100%;
+                max-width: 720px;
+                padding: 90px 0 45px;
+            }
+
+            .specialities-page .page-hero-decoration {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: min(300px, 68vw);
+                margin: 0 auto 70px;
+            }
+
+            .specialities-page .speciality-detail-grid,
+            .specialities-page .speciality-detail-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 42px;
+            }
+
+            .specialities-page .speciality-detail-grid.reverse .speciality-detail-visual,
+            .specialities-page .speciality-detail-grid.reverse .speciality-detail-content {
+                order: initial;
+            }
+
+            .specialities-page .speciality-detail-visual {
+                min-height: 440px;
+            }
+
+            .specialities-page .speciality-detail-content {
+                max-width: none;
+            }
+
+            .specialities-page .team-cta {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 42px 32px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .specialities-page .page-hero {
+                min-height: 0;
+            }
+
+            .specialities-page .page-hero-content {
+                padding: 70px 0 35px;
+            }
+
+            .specialities-page .page-hero h1 {
+                font-size: clamp(2.75rem, 13vw, 4.2rem);
+                line-height: .98;
+            }
+
+            .specialities-page .page-hero p {
+                font-size: .95rem;
+                line-height: 1.7;
+            }
+
+            .specialities-page .page-hero-decoration {
+                width: min(245px, 62vw);
+                margin-bottom: 60px;
+            }
+
+            .specialities-page .page-hero-tooth {
+                font-size: 5.4rem;
+            }
+
+            .specialities-page .speciality-intro {
+                padding-top: 75px;
+                padding-bottom: 35px;
+            }
+
+            .specialities-page .speciality-detail-section {
+                padding: 72px 0;
+            }
+
+            .specialities-page .speciality-detail-visual {
+                min-height: 370px;
+                border-radius: 27px;
+            }
+
+            .specialities-page .speciality-detail-visual::before {
+                inset: 10px;
+                border-radius: 20px;
+            }
+
+            .specialities-page .speciality-image-label {
+                left: 20px;
+                bottom: 20px;
+                font-size: .59rem;
+                padding: 9px 12px;
+            }
+
+            .specialities-page .speciality-detail-content h2 {
+                font-size: clamp(2.35rem, 11vw, 3.25rem);
+                line-height: 1.03;
+            }
+
+            .specialities-page .speciality-detail-content > p {
+                font-size: .93rem;
+                line-height: 1.75;
+            }
+
+            .specialities-page .speciality-doctor {
+                padding: 15px;
+                border-radius: 18px;
+            }
+
+            .specialities-page .speciality-doctor-photo {
+                width: 54px;
+                height: 54px;
+                flex-basis: 54px;
+            }
+
+            .specialities-page .speciality-doctor-info h3 {
+                font-size: 1.05rem;
+            }
+
+            .specialities-page .academic-details span {
+                font-size: .68rem;
+            }
+
+            .specialities-page .speciality-why-grid {
+                grid-template-columns: 1fr;
+                margin-top: 38px;
+            }
+
+            .specialities-page .why-point {
+                min-height: 0;
+                padding: 24px;
+            }
+
+            .specialities-page .team-cta-section {
+                padding: 70px 0;
+            }
+
+            .specialities-page .team-cta {
+                border-radius: 25px;
+                padding: 34px 24px;
+            }
+
+            .specialities-page .team-cta h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .specialities-page .speciality-detail-visual img,
+            .specialities-page .why-point {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="specialities-page">
+
+<header class="site-header">
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo" aria-label="Smile Nest Dental Clinic Home">
+            <img src="assets/icons/smile-nest-logo.svg" alt="Smile Nest Dental Clinic">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="specialities.html" class="active">Specialities</a>
+            <a href="index.html#specialists">Our Team</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="#appointment" class="nav-button">Book Appointment</a>
+        </nav>
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNavigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <nav class="mobile-navigation" id="mobileNavigation" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="specialities.html">Specialities</a>
+        <a href="index.html#specialists">Our Team</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="#appointment" class="mobile-nav-button">Book Appointment</a>
+    </nav>
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     PREMIUM HERO
+     ===================================================== -->
+
+<section class="page-hero">
+
+    <div class="container page-hero-container">
+
+        <div class="page-hero-content reveal">
+
+            <span class="eyebrow">
+                OUR SPECIALITIES
+            </span>
+
+            <h1>
+                Specialist Care.
+                <span>One Welcoming Place.</span>
+            </h1>
+
+            <p>
+                From your child's first dental visit to advanced
+                specialist treatment, Smile Nest brings focused
+                dental expertise together under one roof.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#pediatric-dentistry" class="btn btn-primary">
+                    Explore Our Care
+                </a>
+
+                <a
+                    href="https://wa.me/919496041577"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+                    WhatsApp Us
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="page-hero-decoration reveal-scale" aria-hidden="true">
+            <div class="page-hero-circle">
+                <div class="page-hero-tooth">✦</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section class="section speciality-intro">
+
+    <div class="container">
+
+        <div class="section-heading centered reveal">
+
+            <span class="eyebrow">
+                COMPREHENSIVE DENTAL CARE
+            </span>
+
+            <h2>
+                Expertise for
+                <span>Every Stage of Your Smile.</span>
+            </h2>
+
+            <p>
+                Our team combines focused specialist knowledge
+                with a patient-first approach, helping you access
+                the care you need in a comfortable environment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PEDIATRIC DENTISTRY
+     ===================================================== -->
+
+<section class="speciality-detail-section section" id="pediatric-dentistry">
+
+    <div class="container">
+
+        <div class="speciality-detail-grid">
+
+            <div class="speciality-detail-visual reveal-left">
+
+                <img
+                    src="assets/images/treatments/child-dent.png"
+                    alt="Children's dentistry at Smile Nest Dental Clinic"
+                >
+
+                <span class="speciality-image-label">
+                    Pediatric Dentistry
+                </span>
+
+            </div>
+
+
+            <div class="speciality-detail-content reveal-right">
+
+                <span class="eyebrow">
+                    PEDIATRIC DENTISTRY
+                </span>
+
+                <h2>
+                    Gentle Dentistry
+                    <span>for Growing Smiles.</span>
+                </h2>
+
+                <p>
+                    Children's dental care requires more than clinical
+                    treatment. It requires patience, communication and
+                    an environment where children feel safe.
+                </p>
+
+                <p>
+                    Smile Nest focuses on creating positive dental
+                    experiences while caring for developing teeth and
+                    supporting healthy oral habits.
+                </p>
+
+                <div class="speciality-doctor">
+
+                    <div class="speciality-doctor-photo">
+                        <img
+                            src="assets/images/founder/dr-greeshma-sg.jpg.jpeg"
+                            alt="Dr Greeshma SG, MDS"
+                        >
+                    </div>
+
+                    <div class="speciality-doctor-info">
+
+                        <span>SPECIALIST</span>
+
+                        <h3>
+                            Dr Greeshma SG, MDS
+                        </h3>
+
+                        <p>
+                            Chief Dental Surgeon &amp; Pediatric Dentist
+                        </p>
+
+                        <small>
+                            10 years experience
+                        </small>
+
+                        <div class="academic-details">
+                            <span>
+                                <strong>BDS</strong> — Govt Dental College Kottayam
+                            </span>
+                            <span>
+                                <strong>MDS</strong> — PMS College of Dental Sciences and Research Centre
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://wa.me/919496041577?text=Hello%20Smile%20Nest,%20I%20would%20like%20to%20enquire%20about%20Pediatric%20Dentistry."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+                    Enquire About Pediatric Dentistry
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ORTHODONTICS
+     ===================================================== -->
+
+<section class="speciality-detail-section section section-soft" id="orthodontics">
+
+    <div class="container">
+
+        <div class="speciality-detail-grid reverse">
+
+            <div class="speciality-detail-visual reveal-right">
+
+                <img
+                    src="assets/images/treatments/braces.png"
+                    alt="Braces and orthodontic treatment at Smile Nest Dental Clinic"
+                >
+
+                <span class="speciality-image-label">
+                    Orthodontics
+                </span>
+
+            </div>
+
+
+            <div class="speciality-detail-content reveal-left">
+
+                <span class="eyebrow">
+                    ORTHODONTICS
+                </span>
+
+                <h2>
+                    Healthier Alignment.
+                    <span>Confident Smiles.</span>
+                </h2>
+
+                <p>
+                    Orthodontic treatment can improve the alignment,
+                    function and appearance of your teeth while
+                    supporting long-term oral health.
+                </p>
+
+                <p>
+                    Treatment is planned around each patient's
+                    individual needs, with careful attention to
+                    comfort and predictable progress.
+                </p>
+
+                <div class="speciality-doctor">
+
+                    <div class="speciality-doctor-photo">
+                        <img
+                            src="assets/images/doctors/dr-aravind-s.jpg.jpeg"
+                            alt="Dr Aravind S, MDS"
+                        >
+                    </div>
+
+                    <div class="speciality-doctor-info">
+
+                        <span>SPECIALIST</span>
+
+                        <h3>
+                            Dr Aravind S, MDS
+                        </h3>
+
+                        <p>
+                            Consultant Orthodontist
+                        </p>
+
+                        <small>
+                            10 years experience
+                        </small>
+
+                        <div class="academic-details">
+                            <span>
+                                <strong>BDS</strong> — NIMS Dental College
+                            </span>
+                            <span>
+                                <strong>MDS</strong> — Sree Sankara Institute of Dental Sciences
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://wa.me/919496041577?text=Hello%20Smile%20Nest,%20I%20would%20like%20to%20enquire%20about%20Orthodontics."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+                    Enquire About Orthodontics
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENDODONTICS
+     ===================================================== -->
+
+<section class="speciality-detail-section section" id="endodontics">
+
+    <div class="container">
+
+        <div class="speciality-detail-grid">
+
+            <div class="speciality-detail-visual reveal-left">
+
+                <img
+                    src="assets/images/treatments/roo-canal.png"
+                    alt="Root canal treatment at Smile Nest Dental Clinic"
+                >
+
+                <span class="speciality-image-label">
+                    Endodontics
+                </span>
+
+            </div>
+
+
+            <div class="speciality-detail-content reveal-right">
+
+                <span class="eyebrow">
+                    ENDODONTICS
+                </span>
+
+                <h2>
+                    Save Your Natural
+                    <span>Smile.</span>
+                </h2>
+
+                <p>
+                    Endodontic treatment focuses on diagnosing and
+                    treating problems affecting the inside of the tooth.
+                </p>
+
+                <p>
+                    Our approach prioritises accurate diagnosis,
+                    precise treatment and patient comfort while helping
+                    preserve natural teeth whenever possible.
+                </p>
+
+                <div class="speciality-doctor">
+
+                    <div class="speciality-doctor-photo">
+                        <img
+                            src="assets/images/doctors/dr-naveen-g.jpg.jpeg"
+                            alt="Dr Naveen G, MDS"
+                        >
+                    </div>
+
+                    <div class="speciality-doctor-info">
+
+                        <span>SPECIALIST</span>
+
+                        <h3>
+                            Dr Naveen G, MDS
+                        </h3>
+
+                        <p>
+                            Consultant Endodontist
+                        </p>
+
+                        <small>
+                            5 years experience
+                        </small>
+
+                        <div class="academic-details">
+                            <span>
+                                <strong>BDS</strong> — PMS College of Dental Sciences and Research Centre
+                            </span>
+                            <span>
+                                <strong>MDS</strong> — PMS College of Dental Sciences and Research Centre
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://wa.me/919496041577?text=Hello%20Smile%20Nest,%20I%20would%20like%20to%20enquire%20about%20Endodontics."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+                    Enquire About Endodontics
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ORAL & MAXILLOFACIAL SURGERY
+     ===================================================== -->
+
+<section class="speciality-detail-section section section-soft" id="oral-surgery">
+
+    <div class="container">
+
+        <div class="speciality-detail-grid reverse">
+
+            <div class="speciality-detail-visual reveal-right">
+
+                <img
+                    src="assets/images/treatments/surgery.png"
+                    alt="Oral and maxillofacial surgery at Smile Nest Dental Clinic"
+                >
+
+                <span class="speciality-image-label">
+                    Oral Surgery
+                </span>
+
+            </div>
+
+
+            <div class="speciality-detail-content reveal-left">
+
+                <span class="eyebrow">
+                    ORAL &amp; MAXILLOFACIAL SURGERY
+                </span>
+
+                <h2>
+                    Specialist Surgical
+                    <span>Care.</span>
+                </h2>
+
+                <p>
+                    Oral and maxillofacial surgery covers a broad
+                    range of conditions affecting the mouth, jaw
+                    and surrounding facial structures.
+                </p>
+
+                <p>
+                    Specialist assessment and treatment help ensure
+                    that complex oral and surgical concerns are
+                    managed with appropriate clinical care.
+                </p>
+
+                <div class="speciality-doctor">
+
+                    <div class="speciality-doctor-photo">
+                        <img
+                            src="assets/images/doctors/dr-remya-g.jpg.jpeg"
+                            alt="Dr Remya G, MDS"
+                        >
+                    </div>
+
+                    <div class="speciality-doctor-info">
+
+                        <span>SPECIALIST</span>
+
+                        <h3>
+                            Dr Remya G, MDS
+                        </h3>
+
+                        <p>
+                            Consultant Oral &amp; Maxillofacial Surgeon
+                        </p>
+
+                        <small>
+                            10 years experience
+                        </small>
+
+                        <div class="academic-details">
+                            <span>
+                                <strong>BDS</strong> — Govt Dental College Thiruvananthapuram
+                            </span>
+                            <span>
+                                <strong>MDS</strong> — Govt Dental College Kottayam
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://wa.me/919496041577?text=Hello%20Smile%20Nest,%20I%20would%20like%20to%20enquire%20about%20Oral%20and%20Maxillofacial%20Surgery."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+                    Enquire About Oral Surgery
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROSTHODONTICS & IMPLANTOLOGY
+     ===================================================== -->
+
+<section class="speciality-detail-section section" id="prosthodontics">
+
+    <div class="container">
+
+        <div class="speciality-detail-grid">
+
+            <div class="speciality-detail-visual reveal-left">
+
+                <img
+                    src="assets/images/treatments/missing-tooth.png"
+                    alt="Prosthodontic and implant treatment at Smile Nest Dental Clinic"
+                >
+
+                <span class="speciality-image-label">
+                    Prosthodontics &amp; Implantology
+                </span>
+
+            </div>
+
+
+            <div class="speciality-detail-content reveal-right">
+
+                <span class="eyebrow">
+                    PROSTHODONTICS &amp; IMPLANTOLOGY
+                </span>
+
+                <h2>
+                    Restore Function.
+                    <span>Renew Confidence.</span>
+                </h2>
+
+                <p>
+                    Restorative dentistry can help rebuild damaged
+                    or missing teeth while improving the appearance
+                    and function of your smile.
+                </p>
+
+                <p>
+                    Treatment is planned to create natural-looking,
+                    functional results while considering each
+                    patient's individual goals.
+                </p>
+
+                <div class="speciality-doctor">
+
+                    <div class="speciality-doctor-photo">
+                        <img
+                            src="assets/images/doctors/dr-joyal-jose-baby.jpg.jpeg"
+                            alt="Dr Joyal Jose Baby, MDS"
+                        >
+                    </div>
+
+                    <div class="speciality-doctor-info">
+
+                        <span>SPECIALIST</span>
+
+                        <h3>
+                            Dr Joyal Jose Baby, MDS
+                        </h3>
+
+                        <p>
+                            Consultant Prosthodontist &amp; Implantologist
+                        </p>
+
+                        <small>
+                            6 years experience
+                        </small>
+
+                        <div class="academic-details">
+                            <span>
+                                <strong>BDS</strong> — PMNM Dental College, Bangalore
+                            </span>
+                            <span>
+                                <strong>MDS</strong> — PMS College of Dental Sciences and Research Centre
+                            </span>
+                            <span>
+                                Assistant Professor — PMS College of Dental Sciences and Research Centre
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://wa.me/919496041577?text=Hello%20Smile%20Nest,%20I%20would%20like%20to%20enquire%20about%20Prosthodontics%20and%20Implantology."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-whatsapp"
+                >
+                    Enquire About Prosthodontics
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY SMILE NEST
+     ===================================================== -->
+
+<section class="why-section section section-soft">
+
+    <div class="container">
+
+        <div class="section-heading centered reveal">
+
+            <span class="eyebrow">
+                WHY SMILE NEST
+            </span>
+
+            <h2>
+                Specialist Expertise.
+                <span>A Gentler Experience.</span>
+            </h2>
+
+            <p>
+                We bring specialised dental care together with
+                a calm and patient-focused environment.
+            </p>
+
+        </div>
+
+
+        <div class="why-points speciality-why-grid">
+
+            <div class="why-point reveal">
+
+                <div class="why-icon">✦</div>
+
+                <div>
+                    <h3>Multiple Specialities</h3>
+                    <p>
+                        Focused expertise across different
+                        areas of dentistry.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-point reveal">
+
+                <div class="why-icon">♡</div>
+
+                <div>
+                    <h3>Child-Friendly Approach</h3>
+                    <p>
+                        A gentle environment designed to
+                        help children feel comfortable.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-point reveal">
+
+                <div class="why-icon">✓</div>
+
+                <div>
+                    <h3>Personalised Care</h3>
+                    <p>
+                        Treatment plans shaped around
+                        each patient's needs.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-point reveal">
+
+                <div class="why-icon">⌖</div>
+
+                <div>
+                    <h3>Convenient Location</h3>
+                    <p>
+                        Located on Ulloor-Akkulam Road
+                        in Thiruvananthapuram.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TEAM CTA
+     ===================================================== -->
+
+<section class="team-cta-section section">
+
+    <div class="container">
+
+        <div class="team-cta reveal">
+
+            <div>
+
+                <span class="eyebrow">
+                    OUR SPECIALISTS
+                </span>
+
+                <h2>
+                    Meet the people
+                    <span>behind your care.</span>
+                </h2>
+
+                <p>
+                    Explore our team of dental specialists
+                    and learn about their areas of expertise.
+                </p>
+
+            </div>
+
+            <a
+                href="index.html#specialists"
+                class="btn btn-primary"
+            >
+                Meet Our Specialists
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPOINTMENT CTA
+     ===================================================== -->
+
+<section class="appointment-section" id="appointment">
+
+    <div class="appointment-decoration appointment-decoration-one"></div>
+    <div class="appointment-decoration appointment-decoration-two"></div>
+
+    <div class="container appointment-container reveal">
+
+        <span class="eyebrow eyebrow-light">
+            READY WHEN YOU ARE
+        </span>
+
+        <h2>
+            Let's Take Care
+            <span>of Your Smile.</span>
+        </h2>
+
+        <p>
+            Book your visit with Smile Nest Dental Clinic today.
+        </p>
+
+        <div class="appointment-actions">
+
+            <a
+                href="https://wa.me/919496041577"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="final-button whatsapp-button"
+            >
+                <span>WhatsApp to Book</span>
+                <span>→</span>
+            </a>
+
+            <a
+                href="tel:9496041577"
+                class="final-button call-button"
+            >
+                <span>Call the Clinic</span>
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="container footer-container">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="footer-logo">
+                <img
+                    src="assets/icons/smile-nest-logo.svg"
+                    alt="Smile Nest Dental Clinic"
+                >
+            </a>
+
+            <p>
+                Specialised dental care with a
+                gentler approach.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <div>
+                <h4>Explore</h4>
+                <a href="index.html#about">About</a>
+                <a href="specialities.html">Specialities</a>
+                <a href="index.html#specialists">Our Team</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+
+            <div>
+                <h4>Visit</h4>
+                <p>
+                    Opposite Idiyadikodu Devi Temple,
+                    Ulloor-Akkulam Road,
+                    Thiruvananthapuram,
+                    Kerala
+                </p>
+            </div>
+
+
+            <div>
+                <h4>Contact</h4>
+
+                <a href="tel:9496041577">
+                    +91 94960 41577
+                </a>
+
+                <a
+                    href="https://wa.me/919496041577"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <span>
+                ©
+                <span data-current-year></span>
+                Smile Nest Dental Clinic.
+                All rights reserved.
+            </span>
+
+            <span>
+                Thiruvananthapuram, Kerala
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/appointments.js"></script>
+
+</body>
+</html>
