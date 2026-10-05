@@ -2408,3 +2408,92 @@ img:not([src]) {
         max-height: 460px;
     }
 }
+/* =========================================================
+   MOBILE TRANSFORMATION CAROUSEL
+   Image-first layout so the result is never hidden by text
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .transformation-carousel {
+        overflow: hidden;
+    }
+
+    .transformation-track {
+        width: 100%;
+    }
+
+    .transformation-slide {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 28px;
+        background: var(--color-dark-teal, #082F32);
+    }
+
+    /* The complete before/after image stays visible */
+    .transformation-slide .transformation-image {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        object-fit: contain;
+        object-position: center;
+        background: #ffffff;
+        flex-shrink: 0;
+    }
+
+    /* Caption moves BELOW the image */
+    .transformation-slide .transformation-caption {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        min-height: 190px;
+        padding: 28px 24px 34px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--color-dark-teal, #082F32);
+        z-index: 2;
+    }
+
+    .transformation-slide .transformation-caption::before {
+        display: none;
+    }
+
+    .transformation-slide .transformation-caption span {
+        position: relative;
+        display: block;
+        margin-bottom: 10px;
+        font-size: 0.72rem;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--color-dusty-rose, #D99AAA);
+    }
+
+    .transformation-slide .transformation-caption h3 {
+        position: relative;
+        margin: 0;
+        max-width: 100%;
+        font-size: clamp(2rem, 8vw, 2.7rem);
+        line-height: 1.08;
+        color: #ffffff;
+    }
+
+    /* Keep carousel controls cleanly below/over the caption */
+    .transformation-carousel .carousel-arrow {
+        z-index: 5;
+    }
+
+    .transformation-carousel .carousel-dots {
+        position: relative;
+        z-index: 6;
+    }
+
+}
